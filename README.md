@@ -17,6 +17,12 @@
 
 本文是对其的翻译。
 
+不必严格遵守本文的所有原则，有时少遵守一些效果可能会更好，具体应根据实际情况决定。这是根据《代码整洁之道》作者多年经验整理的代码优化建议，但也仅仅只是一份建议。
+
+软件工程已经发展了50多年，至今仍在不断前进。现在，把这些原则当作试金石，尝试将他们作为团队代码质量考核的标准之一吧。
+
+最后你需要知道的是，这些东西不会让你立刻变成一个优秀的工程师，长期奉行他们也并不意味着你能够高枕无忧不再犯错。千里之行，始于足下。我们需要时常和同行们进行代码评审，不断优化自己的代码。不要惧怕改善代码质量所需付出的努力，加油。
+
 ## **变量**
 ### 使用有意义，可读性好的变量名
 
@@ -1227,7 +1233,6 @@ let $ = new DOMTraverser({
 ### 依赖反转原则 (DIP)
 该原则有两个核心点:  
 1. 高层模块不应该依赖于低层模块。他们都应该依赖于抽象接口。
-
 2. 抽象接口应该脱离具体实现，具体实现应该依赖于抽象接口。
 
 **反例**:
@@ -1470,7 +1475,7 @@ let car = new Car()
 
 1. 继承关系表现为"是一个"而非"有一个"(如动物->人 和 用户->用户细节)
 2. 可以复用基类的代码("Human"可以看成是"All animal"的一种)
-3. 希望当基类改变时所有派生类都受到影响(如修改"all animals"移动时的卡路里消耗量)。
+3. 希望当基类改变时所有派生类都受到影响(如修改"all animals"移动时的卡路里消耗量)
 
 **反例**:
 ```javascript
@@ -1523,6 +1528,7 @@ class EmployeeTaxData {
 
 ## **测试**
 [一些好的覆盖工具](http://gotwarlost.github.io/istanbul/).
+
 [一些好的JS测试框架](http://jstherightway.org/#testing-tools)
 
 ### 单一的测试每个概念
@@ -1965,11 +1971,35 @@ let actions = function() {
 ```
 **[回到目录](#目录)**
 
-### Avoid legal comments in source files
-That's what your `LICENSE` file at the top of your source tree is for.
+### 避免在源文件中写入法律评论
+将你的`LICENSE`文件置于源码目录树的根目录。
 
 **反例**:
 ```javascript
+/*
+The MIT License (MIT)
+
+Copyright (c) 2016 Ryan McDermott
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE
+*/
+
 function calculateBill() {
   // ...
 }
