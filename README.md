@@ -1,3 +1,5 @@
+Original Repository: [ryanmcdermott/clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript)
+
 # JavaScript风格指南
  
 ## 目录
