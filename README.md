@@ -361,7 +361,7 @@ function parseBetterJSAlternative(code) {
 **反例**:
 ```javascript
 function showDeveloperList(developers) {
-  developers.forEach(developers => {
+  developers.forEach(developer => {
     var expectedSalary = developer.calculateExpectedSalary();
     var experience = developer.getExperience();
     var githubLink = developer.getGithubLink();
