@@ -1654,9 +1654,9 @@ async function getCleanCodeArticle() {
     await fileHandle.writeFile('article.html', response);
     console.log('File written');
   } catch(err) {
-      console.log(err);
-    }
+    console.log(err);
   }
+}
 ```
 **[回到目录](#目录)**
 
