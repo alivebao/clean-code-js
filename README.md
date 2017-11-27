@@ -102,10 +102,11 @@ saveCityState(cityStateRegex.match(cityStateRegex)[1], cityStateRegex.match(city
 
 **正例**:
 ```javascript
-const cityStateRegex = /^(.+)[,\\s]+(.+?)\s*(\d{5})?$/;
-const match = cityStateRegex.match(cityStateRegex)
-const city = match[1];
-const state = match[2];
+const ADDRESS = 'One Infinite Loop, Cupertino 95014';
+var cityStateRegex = /^(.+)[,\\s]+(.+?)\s*(\d{5})?$/;
+var match = ADDRESS.match(cityStateRegex)
+var city = match[1];
+var state = match[2];
 saveCityState(city, state);
 ```
 **[回到目录](#目录)**
