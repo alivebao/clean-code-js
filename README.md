@@ -275,6 +275,7 @@ function dateAdd(date, month) {
 let date = new Date();
 
 // 很难理解dateAdd(date, 1)是什么意思
+dateAdd(date, 1);
 ```
 
 **正例**:
